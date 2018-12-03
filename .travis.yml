@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 10
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+notifications:
+    slack: mcfadyenbrasil:kbMVbztMC74kPXp8zdSI8w1J
+script:
+  - $(npm bin)/cypress run --browser chrome --record --key 676033b9-8d5d-4c87-b676-78bedfa127b5
